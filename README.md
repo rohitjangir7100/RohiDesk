@@ -44,7 +44,7 @@ A fully responsive and modern Service Desk application built with **React**, **F
 ### 1. Clone the repo
 
 git clone https://github.com/rohitjangir7100/RohiDesk.git
-cd service-desk-app
+cd RohiDesk
 
 2. Install dependencies
 
