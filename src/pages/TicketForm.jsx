@@ -49,7 +49,7 @@ export default function TicketForm() {
   /* 🪙 Razorpay handler → Firestore & EmailJS */
   const handleSubmit = async () => {
     const options = {
-      key: "rzp_test_pBYw3NDyMMMq2N",
+      key: "rzp_test_XXXXXXXXX", // use your Razorpay API Key here
       amount: 5000,
       currency: "INR",
       name: "RohiDesk",
