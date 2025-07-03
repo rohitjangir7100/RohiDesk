@@ -116,7 +116,7 @@ src/<br>
 ├── firebase.js           # Firebase config<br>
 ├── App.jsx / main.jsx    # Entry point<br>
 ├── styles/               # Tailwind or custom styles<br>
-└── utils/                # Helper functions<br>
+└── contexts/                # Helper functions<br> and more...
 
 📦 Deployment<br>
 You can deploy this app on Netlify, Vercel, or Firebase Hosting:<br>
