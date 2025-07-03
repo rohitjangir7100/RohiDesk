@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html.dark body {
+        @apply bg-gray-900 text-white;
+    }
+
+    body {
+        @apply bg-gray-50 text-gray-900;
+    }
+}
+
+button,
+input,
+select,
+textarea {
+    @apply outline-none;
+}
+
+.react-loading-skeleton {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card {
+    @apply bg-white dark:bg-gray-800 text-black dark:text-white p-4 rounded shadow;
+}
+
+/* hide scrollbars on mobile chrome/safari */
+.scrollbar-thin::-webkit-scrollbar {
+    height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background: theme(colors.gray.400/60);
+    border-radius: 3px;
+}
+
