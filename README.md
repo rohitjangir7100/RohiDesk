@@ -59,69 +59,69 @@ Add your Firebase config in firebase.js:
 
 
 // src/firebase.js
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
+import { initializeApp } from "firebase/app";<br>
+import { getFirestore } from "firebase/firestore";<br>
+import { getAuth } from "firebase/auth";<br>
 
-const firebaseConfig = {
-  apiKey: "XXXX",
-  authDomain: "XXXX",
-  projectId: "XXXX",
-  storageBucket: "XXXX",
-  messagingSenderId: "XXXX",
-  appId: "XXXX"
-};
+const firebaseConfig = {<br>
+  apiKey: "XXXX",<br>
+  authDomain: "XXXX",<br>
+  projectId: "XXXX",<br>
+  storageBucket: "XXXX",<br>
+  messagingSenderId: "XXXX",<br>
+  appId: "XXXX"<br>
+};<br>
 
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-export const auth = getAuth(app);
+const app = initializeApp(firebaseConfig);<br>
+export const db = getFirestore(app);<br>
+export const auth = getAuth(app);<br>
 
-4. Firestore Rules (Secure access)
+4. Firestore Rules (Secure access)<br>
 
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /tickets/{ticketId} {
-      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
-    }
-    match /feedbacks/{feedbackId} {
-      allow create: if request.auth != null;
-    }
-  }
-}
+rules_version = '2';<br>
+service cloud.firestore {<br>
+  match /databases/{database}/documents {<br>
+    match /tickets/{ticketId} {<br>
+      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;<br>
+    }<br>
+    match /feedbacks/{feedbackId} {<br>
+      allow create: if request.auth != null;<br>
+    }<br>
+  }<br>
+}<br>
 
-5. EmailJS Setup 💌
-Sign up at EmailJS
-Create a service & email template (include message, user_email, user_name)
-Add credentials in .env file:
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
+5. EmailJS Setup 💌<br>
+Sign up at EmailJS<br>
+Create a service & email template (include message, user_email, user_name)<br>
+Add credentials in .env file:<br>
+VITE_EMAILJS_SERVICE_ID=your_service_id<br>
+VITE_EMAILJS_TEMPLATE_ID=your_template_id<br>
+VITE_EMAILJS_PUBLIC_KEY=your_public_key<br>
 
-6. Razorpay Setup 💳
-Create account at Razorpay
-Use test key in .env:
-VITE_RAZORPAY_KEY_ID=rzp_test_xxxxxxxxx
+6. Razorpay Setup 💳<br>
+Create account at Razorpay<br>
+Use test key in .env:<br>
+VITE_RAZORPAY_KEY_ID=rzp_test_xxxxxxxxx<br>
 
-7. Start the app 🚀
-npm start
-Visit: http://localhost:3000
+7. Start the app 🚀<br>
+npm start<br>
+Visit: http://localhost:3000<br>
 
-📁 Project Structure
-src/
-│
-├── assets/               # Images, Lottie JSON
-├── components/           # Reusable components like TicketCard, Modal
-├── pages/                # Pages like Home, Dashboard, Privacy, etc.
-├── firebase.js           # Firebase config
-├── App.jsx / main.jsx    # Entry point
-├── styles/               # Tailwind or custom styles
-└── utils/                # Helper functions
+📁 Project Structure<br>
+src/<br>
+│<br>
+├── assets/               # Images, Lottie JSON<br>
+├── components/           # Reusable components like TicketCard, Modal<br>
+├── pages/                # Pages like Home, Dashboard, Privacy, etc.<br>
+├── firebase.js           # Firebase config<br>
+├── App.jsx / main.jsx    # Entry point<br>
+├── styles/               # Tailwind or custom styles<br>
+└── utils/                # Helper functions<br>
 
-📦 Deployment
-You can deploy this app on Netlify, Vercel, or Firebase Hosting:
-npm run build
-Then upload the dist/ folder or connect your GitHub repo.
+📦 Deployment<br>
+You can deploy this app on Netlify, Vercel, or Firebase Hosting:<br>
+npm run build<br>
+Then upload the dist/ folder or connect your GitHub repo.<br>
 
 🧠 Future Enhancements
 Admin panel with role-based access
