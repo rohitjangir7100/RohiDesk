@@ -15,8 +15,7 @@ A fully responsive and modern Service Desk application built with **React**, **F
 ✅ Razorpay payment integration  
 ✅ Modern UI with light/dark mode support  
 ✅ PWA support with offline error message  
-✅ Admin dashboard with charts  
-✅ Animated empty state (Lottie)  
+✅ Admin dashboard   
 ✅ Keyboard accessibility  
 ✅ Toast notifications  
 ✅ In-app notification bell with unread badge  
@@ -32,8 +31,7 @@ A fully responsive and modern Service Desk application built with **React**, **F
 - **Email**: [EmailJS](https://www.emailjs.com/)  
 - **Payments**: [Razorpay](https://razorpay.com/docs/)  
 - **PDF**: jsPDF, html2canvas  
-- **Notifications**: react-toastify  
-- **Animations**: Lottie-react  
+- **Notifications**: react-toastify   
 - **Icons**: Heroicons  
 - **PWA**: Web Manifest + Service Worker  
 
@@ -94,9 +92,7 @@ service cloud.firestore {
 
 5. EmailJS Setup 💌
 Sign up at EmailJS
-
 Create a service & email template (include message, user_email, user_name)
-
 Add credentials in .env file:
 VITE_EMAILJS_SERVICE_ID=your_service_id
 VITE_EMAILJS_TEMPLATE_ID=your_template_id
@@ -104,7 +100,6 @@ VITE_EMAILJS_PUBLIC_KEY=your_public_key
 
 6. Razorpay Setup 💳
 Create account at Razorpay
-
 Use test key in .env:
 VITE_RAZORPAY_KEY_ID=rzp_test_xxxxxxxxx
 
@@ -130,13 +125,9 @@ Then upload the dist/ folder or connect your GitHub repo.
 
 🧠 Future Enhancements
 Admin panel with role-based access
-
 Chat support or ticket replies
-
 Export ticket history
-
 SMS/Push notifications
-
 Ticket priority tagging
 
 📄 License
